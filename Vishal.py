@@ -57,11 +57,11 @@ def stop():
       GPIO.output(MOTOR2B,GPIO.LOW)
 
 def mapServoPosition (x, y):
-    if (x < 220):
+    if (x < 210):
             leftturn()
             time.sleep(0.00925)
  
-    if (x > 280):
+    if (x > 270):
             rightturn()
             time.sleep(0.00925)
 
@@ -75,8 +75,8 @@ print("waiting for camera to warmup...")
 vs = VideoStream(0).start()
 time.sleep(2.0)
 
-colorLower = (24, 100, 100)
-colorUpper = (44, 255, 255)
+colorLower = (24, 100, 100)   # change upper range of hsv range according to colour
+colorUpper = (44, 255, 255)   # change lower range of hsv range according to colour
 
 while True:
 
